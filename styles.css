@@ -1,0 +1,128 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --nft-name: hsl(0, 0%, 100%);
+    --nft-detail: hsl(215, 51%, 70%);
+    --eth: hsl(178, 100%, 50%);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    background-color: var(--main-bg);
+    display: flex;
+    justify-content: center;
+}
+
+span,
+img {
+    vertical-align: middle;
+}
+
+.card {
+    max-width: 17rem;
+    background-color: var(--card-bg);
+    border-radius: 7px;
+    color: var(--nft-detail);
+    font-family: 'Outfit', sans-serif;
+    padding: 20px;
+}
+
+.image-container {
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+}
+
+.eye {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.nft-image {
+    max-width: 20rem;
+    max-height: 20rem;
+    width: 100%;
+    border-radius: 7px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover
+{
+    background-color: hsl(178, 100%, 50%, 90%);
+}
+
+.image-container:hover img:first-child {
+    visibility: visible;
+    opacity: 1;
+}
+
+.image-container:hover img:last-child {
+    opacity: 0.5;
+}
+
+.nft-name {
+    color: var(--nft-name);
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.nft-description {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.eth-time {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 2px var(--nft-detail);
+    padding-bottom: 1.5rem;
+}
+
+.eth {
+    color: var(--eth);
+    font-weight: 600;
+}
+
+.nft-author {
+    padding-top: 17px;
+}
+
+.author-name {
+    color: var(--nft-name);
+    transition: all ease-in 0.1s;
+}
+
+.avt {
+    width: 32px;
+    margin-right: 0.75rem;
+    border: solid 1px white;
+    border-radius: 50%;
+}
+
+.author-name:hover,
+.nft-name:hover {
+    color: var(--eth);
+}
+
+.nft-image,
+.author-name,
+.nft-name {
+    cursor: pointer;
+}
